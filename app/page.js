@@ -1,7 +1,10 @@
-export default function Home() {
+import Hero from "@/components/Hero";
+import Main from "@/components/Main";
+
+export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-     
-    </main>
+    <Main className="">
+     <Hero/>
+    </Main>
   );
 }
