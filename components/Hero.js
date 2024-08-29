@@ -1,6 +1,7 @@
 import { Fugaz_One } from 'next/font/google';
 import React from 'react'
 import Button from './Button';
+import Calendar from './Calendar';
 
 const fugaz = Fugaz_One({ subsets: ["latin"], weight: ['400'] });
 
@@ -13,6 +14,7 @@ export default function Hero() {
         <Button text='Sign up' />
         <Button text='Login' dark/>
       </div>
+      <Calendar/>
     </div>
   )
 }
