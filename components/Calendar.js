@@ -10,15 +10,14 @@ const dayList = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday
 
 
 export default function Calendar(props) {
-  const {demo, data, handleSetMood} = props
-
-
+  const {demo, completeData, handleSetMood} = props
   const now = new Date()
   const currMonth = now.getMonth()
   const [selectedMonth, setSelectedMonth] = useState(Object.keys(months) [currMonth])
   console.log('Selected month: ', selectedMonth)
   const [selectedYear, setSelectedYear] = useState(now.getFullYear())
-
+  
+  const data = completeData?.[]
   function handleIncrementMonth(val){
     // value +1 -1
     // if we hit the bound of the months, then we can just adjust the year that is being displayed instead
