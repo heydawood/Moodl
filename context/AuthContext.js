@@ -2,7 +2,7 @@
 
 import { auth, db } from '@/firebase'
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
-import { doc } from 'firebase/firestore'
+import { doc, getDoc } from 'firebase/firestore'
 import React, { useContext, useState, useEffect } from 'react'
 
 const AuthContext = React.createContext()
@@ -32,6 +32,7 @@ export function AuthProvider({ children }) {
         return signOut(auth)
     }
 
+    //connecting to firebase
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async user => {
 
@@ -44,8 +45,16 @@ export function AuthProvider({ children }) {
                 }
 
                 //if user exists, fetch data from firestore database
-            const docRec = doc(db, 'users', user.uid)
-            
+            console.log('Fetching data')
+            const docRef = doc(db, 'users', user.uid)
+            const docSnap = await getDoc(docRef)
+            let firebaseData = {}
+            if (docSnap.exists()){
+                console.log('Found User Data')
+                firebaseData = docSnap.data()
+                console.log(firebaseData)
+            }
+            setUserDataObj(firebaseData)
 
             } catch (err) {
                 console.log(err.message)
@@ -61,7 +70,12 @@ export function AuthProvider({ children }) {
 
 
     const value = {
-
+        currentUser,
+        userDataObj,
+        signup,
+        logout,
+        login,
+        loading
     }
 
     return (
