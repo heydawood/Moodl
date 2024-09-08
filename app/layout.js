@@ -17,12 +17,12 @@ export default function RootLayout({ children }) {
 
   const header = (
     <header className="p-4 sm:p-8 flex items-center justify-between gap-4">
-      
+
       <Link href={'/'}>
-      <h1 className={'text-base sm:text-lg textGradient ' + fugaz.className}>Moodl</h1>
+        <h1 className={'text-base sm:text-lg textGradient ' + fugaz.className}>Moodl</h1>
       </Link>
 
-      <Logout/>
+      <Logout />
 
     </header>
 
@@ -35,13 +35,13 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <Head/>
+      <Head />
       <AuthProvider>
-      <body className={'w-full max-w-[1000px] mx-auto text-sm sm:text-base min-h-screen flex flex-col text-slate-800 ' + openSans.className}>
-        {header}
-        {children}
-        {footer}
-      </body>
+        <body className={'w-full max-w-[1000px] mx-auto text-sm sm:text-base min-h-screen flex flex-col text-slate-800 ' + openSans.className}>
+          {header}
+          {children}
+          {footer}
+        </body>
       </AuthProvider>
     </html>
   );
