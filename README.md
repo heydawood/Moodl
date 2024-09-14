@@ -1,6 +1,6 @@
 # Moodl
 
-Moodl is a simple and intuitive web application that helps you track and analyze your mood over time. Whether you're feeling great, down, or anywhere in between, Moodl helps you monitor your emotional well-being and gain insights into your mood patterns.
+Moodl is a simple and intuitive web application that helps you track and analyze your mood over time. Whether you're feeling great, down, or anywhere in between, Moodl helps you monitor your emotional well-being and gain insights into your mood patterns. https://moodl-app.netlify.app/
 
 ## Features
 
