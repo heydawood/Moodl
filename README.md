@@ -22,16 +22,34 @@ Moodl is a simple and intuitive web application that helps you track and analyze
 2. View Mood History: Navigate to the history page to view all your past mood entries. You can see how your mood has changed over time.
 3. Analyze Trends: Use the visual charts to analyze mood trends and identify patterns.
 
-## Getting Started
+## Installation & Setup
 
-First, run the development server:
+Follow these steps to run the project locally:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+git clone https://github.com/heydawood/Moodl.git
+cd Moodl
+```
+```
+npm install
+
+```
+
+## 📦 Dependencies
+
+Key dependencies used in this project include:
+
+- [React.js](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development
+
+*(You can add more dependencies if needed)*
+
+## ✨ Contributions
+
+Feel free to submit issues or pull requests if you find bugs or want to enhance this project. Contributions are welcome!
+
+---
+
+### 👨‍💻 Developed by [Dawood Faisal]
+
+https://moodl-app.netlify.app
